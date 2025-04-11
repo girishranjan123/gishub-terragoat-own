@@ -70,7 +70,7 @@ resource "google_sql_database_instance" "master" {
       }
       ipv4_enabled = var.ipv4_enabled
       private_network = var.private_network
-      require_ssl = var.require_ssl
+      ssl_mode = "TRUSTED_CLIENT_CERTIFICATE_REQUIRED"
     }
 
     location_preference {
